@@ -130,3 +130,7 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+# API key
+api_key.json
+asset/
