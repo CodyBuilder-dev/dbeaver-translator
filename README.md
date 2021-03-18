@@ -20,4 +20,8 @@ dbeaver의 번역된 UI 텍스트 파일 구조는 아래와 같습니다.
 
 
 ## 프로그램을 사용한 번역 프로세스 설명
-![](process.png)
+![](doc/process.png)
+
+## 프로그램 페이지
+![](doc/page_main.png)
+![](doc/page_file.png)

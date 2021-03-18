@@ -1,0 +1,34 @@
+  <form name="property_form"
+        method="post"
+        enctype="multipart/form-data"
+        action="{% url 'translator:upload_file' %}"
+        >
+      {% csrf_token %}
+      {{ form }}
+    <button type="submit">파일 업로드</button>
+<!--    <button type="submit" onclick="doGoogleTranslation()">초벌번역</button>-->
+<!--    <button type="submit" onclick="doEncoding()">인코딩</button>-->
+  </form>
+
+
+<hr>
+{% if file_list %}
+    <ul>
+    {% for file in file_list %}
+        <li><a href="{% url 'translator:detail' property.id %}">{{ file.file }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No File are available.</p>
+{% endif %}
+<script>
+      function doGoogleTranslation() {
+          document.property_form.action = "/translator/google-translation";
+          document.property_form.submit();
+      }
+
+      function doEncoding() {
+          document.property_form.action = "/translator/encoding";
+          document.property_form.submit();
+      }
+  </script>

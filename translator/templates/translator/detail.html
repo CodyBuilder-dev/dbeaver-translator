@@ -1,0 +1,23 @@
+<h1>{{ file.package_name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>속성명</th>
+            <th>속성값</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for property in file %}
+            <tr>
+                <th>
+                    {{ property.name }}
+                </th>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
